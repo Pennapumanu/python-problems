@@ -36,4 +36,46 @@ if count == len(name):
     print("palindrone")
 else:
     print("not a palindrone")
+
+
+
+#  -----Factorial using Recursion
+
+
+
+def factorial(n):
+    if n == 1:
+        return 1
+
+    return n * factorial(n-1)
+
+# Fibonacci using Recursion
+
+# Program:
+
+def fib(num):
+    if num == 1 or num == 2:
+        return 1
+
+    return fib(num-1) + fib(num-2)
+
+
+# Sum of N Numbers using Recursion
+
+# Program:
+
+def total(n):
+    if n == 1:
+        return 1
+
+    return n + total(n-1)
+
+# except and try
+
+
+
+try:
+    print(10/0)
+except:
+    print("Cannot divide by zero")
         
