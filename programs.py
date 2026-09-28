@@ -78,4 +78,18 @@ try:
     print(10/0)
 except:
     print("Cannot divide by zero")
+
+# selection sort
+
+n = [29, 10, 14, 37, 13]
+
+for i in range(len(n)):
+  smallest = n[i]
+  min_index = 0
+  for j in range(i+1,len(n)):
+    if n[j]<smallest:
+      smallest = n[j]
+      min_index = j
+      n[i],n[min_index] = n[min_index],n[i]
+print(n)
         
