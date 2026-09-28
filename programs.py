@@ -93,3 +93,14 @@ for i in range(len(n)):
       n[i],n[min_index] = n[min_index],n[i]
 print(n)
         
+
+# program to print middle character(s) in the given string or number.
+
+s = "Manohar"
+
+if len(s)%2==0:
+  middle = len(s)//2
+  print(s[middle-1],[middle])
+else:
+  middle = len(s)//2
+  print(s[middle])
