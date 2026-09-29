@@ -131,6 +131,23 @@ while temp >= 10:
 
     temp = temp // 10
 
+
+n = 75547
+last = n % 10
+temp = n // 10
+middle_sum = 0
+
+while temp >= 10:
+    digit = temp % 10
+    middle_sum = digit + middle_sum
+    temp = temp // 10
+
+outer = last + temp
+
+if middle_sum == outer:
+    print('both are equal')
+else:
+    print('not equal')
 if is_valid:
     print("true")
 else:
