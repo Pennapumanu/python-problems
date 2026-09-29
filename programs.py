@@ -104,3 +104,34 @@ if len(s)%2==0:
 else:
   middle = len(s)//2
   print(s[middle])
+
+
+n = 58361
+
+# Last digit
+last = n % 10
+
+# First digit
+temp = n
+while temp >= 10:
+    temp = temp // 10
+
+first = temp
+
+# Middle digits check
+temp = n // 10
+is_valid = True
+
+while temp >= 10:
+    digit = temp % 10
+
+    if digit >= first or digit >= last:
+        is_valid = False
+        break
+
+    temp = temp // 10
+
+if is_valid:
+    print("true")
+else:
+    print("false")
