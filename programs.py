@@ -152,3 +152,77 @@ if is_valid:
     print("true")
 else:
     print("false")
+
+
+
+
+Middle Character(s)
+s = "Wonder"
+
+if len(s) % 2 == 0:
+    middle = len(s) // 2
+    print(s[middle - 1] + s[middle])
+else:
+    middle = len(s) // 2
+    print(s[middle])
+    
+# 2. First + Last Digit vs Middle Digits
+
+n = 75547
+
+last = n % 10
+temp = n // 10
+
+middle_sum = 0
+
+while temp >= 10:
+    digit = temp % 10
+    middle_sum = middle_sum + digit
+    temp = temp // 10
+
+outer = last + temp
+
+if middle_sum == outer:
+    print("both are equal")
+else:
+    print("not equal")
+
+
+# 3. Check Middle Digits
+n = 58361
+
+last = n % 10
+
+temp = n
+while temp >= 10:
+    temp = temp // 10
+
+first = temp
+
+temp = n // 10
+is_valid = True
+
+while temp >= 10:
+    digit = temp % 10
+
+    if digit >= first or digit >= last:
+        is_valid = False
+        break
+
+    temp = temp // 10
+
+if is_valid:
+    print("true")
+else:
+    print("false")
+
+
+# 4. Reverse Vowels
+s = "Helloworld"
+rev = ""
+
+for i in s:
+    if i in "aeiou":
+        rev = i + rev
+
+print(rev)
