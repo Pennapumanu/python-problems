@@ -243,3 +243,22 @@ def automorphic(num):
     print(f'{num} is not a automorphic')
 
 automorphic(5)
+
+
+def spynum(num):
+  temp = num
+  sum = 0
+  prod = 1
+  while temp>0:
+    digit = temp%10
+    sum = sum + digit
+    prod = prod*digit
+    temp = temp//10
+
+  if sum == prod:
+    print(f'{num} is a spynumber')
+  else:
+    print(f'{num} is not a spynumber')
+
+spynum(1124)
+    
