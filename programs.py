@@ -226,3 +226,20 @@ for i in s:
         rev = i + rev
 
 print(rev)
+
+
+def automorphic(num):
+  sqNum = num*num
+  count = 0
+  temp=num
+  while temp>0:
+    temp//=10
+    count+=1
+
+  lastDig = sqNum%(10**count)
+  if num == lastDig:
+    print(f'{num} is a automorphic')
+  else:
+    print(f'{num} is not a automorphic')
+
+automorphic(5)
