@@ -261,4 +261,13 @@ def spynum(num):
     print(f'{num} is not a spynumber')
 
 spynum(1124)
+
+def logic(num):
+  last = num%10
+  first = 0
+  while num > 10:
+     num = num//10
+     first = num
+  print(f'the first and last digit is : {first},{last}')
+logic(35458)
     
