@@ -282,3 +282,51 @@ for num in range(45, 101):
 
     if is_prime:
         print(num)
+
+
+n = 24
+
+# Previous prime find cheyyadam
+previous = n - 1
+
+while True:
+    is_prime = True
+
+    for i in range(2, previous):
+        if previous % i == 0:
+            is_prime = False
+            break
+
+    if is_prime:
+        break
+
+    previous = previous - 1
+
+
+# Next prime find cheyyadam
+next_num = n + 1
+
+while True:
+    is_prime = True
+
+    for i in range(2, next_num):
+        if next_num % i == 0:
+            is_prime = False
+            break
+
+    if is_prime:
+        break
+
+    next_num = next_num + 1
+
+
+# Distances calculate cheyyadam
+previous_distance = n - previous
+next_distance = next_num - n
+
+
+# Nearest prime find cheyyadam
+if previous_distance <= next_distance:
+    print("Nearest prime:", previous)
+else:
+    print("Nearest prime:", next_num)
