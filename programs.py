@@ -339,3 +339,45 @@ class Solution:
             if nums[i]==nums[i+1]:
                 return True
         return False
+
+
+arr = [0, 1, 0, 3, 12]
+non = []
+zero = []
+for i in arr:
+  if i != 0 and i > 0:
+    non+=[i]
+  else:
+    zero+=[i]
+new = non + zero
+print(new)
+
+arr = [10, 20, 20, 8, 15, 15, 5]
+
+lar = arr[0]
+sec = arr[0]
+
+for i in arr:
+    if i > lar:
+        sec = lar
+        lar = i
+    elif i > sec and i != lar:
+        sec = i
+
+print(lar)
+print(sec)
+
+
+arr = [10, 5, 8, 20, 15]
+
+lar = arr[0]
+sec = arr[0]
+
+for i in arr:
+    if i > lar:
+        sec = lar
+        lar = i
+    elif i > sec:
+        sec = i
+
+print(sec)
