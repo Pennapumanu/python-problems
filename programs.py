@@ -381,3 +381,14 @@ for i in arr:
         sec = i
 
 print(sec)
+
+
+arr = [1, 2, 3, 5, 6]
+n = 6 
+expected = n*(n+1)//2
+actual = 0
+for i in arr:
+  actual = actual + i
+
+missing = expected - actual 
+print(missing)
