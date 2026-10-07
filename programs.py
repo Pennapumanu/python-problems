@@ -425,3 +425,36 @@ else:
         print("Balanced")
     else:
         print("Not Balanced")
+
+
+s = "tree"
+
+# Step 1: Count frequency
+freq = {}
+
+for ch in s:
+    if ch not in freq:
+        freq[ch] = 1
+    else:
+        freq[ch] += 1
+
+# Step 2: Find highest frequency repeatedly
+result = ""
+
+while freq:
+    max_count = 0
+    max_char = ""
+
+    for ch in freq:
+        if freq[ch] > max_count:
+            max_count = freq[ch]
+            max_char = ch
+
+    # Character ni frequency times add cheyyi
+    for i in range(max_count):
+        result += max_char
+
+    # Already processed character remove cheyyi
+    del freq[max_char]
+
+print(result)
