@@ -458,3 +458,20 @@ while freq:
     del freq[max_char]
 
 print(result)
+
+
+arr = [1,8,9,6,7]
+leaders = []
+
+for i in range(len(arr)):
+  is_leaders = True
+
+  for j in range(i+1,len(arr)):
+    if arr[i]<=arr[j]:
+      is_leaders = False
+      break
+
+  if is_leaders:
+    leaders.append(arr[i])
+
+print(leaders)
