@@ -475,3 +475,22 @@ for i in range(len(arr)):
     leaders.append(arr[i])
 
 print(leaders)
+
+
+
+arr = [4, 2, 2, 1, 4, 3]
+
+dup = []
+
+for ch in arr:
+  if ch not in dup:
+    dup+=[ch]
+    
+for i in range(len(dup)):
+  for j in range(i+1,len(dup)):
+    if dup[j]<dup[i]:
+      dup[i],dup[j] = dup[j],dup[i]
+
+print(dup)
+      
+
