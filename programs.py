@@ -392,3 +392,36 @@ for i in arr:
 
 missing = expected - actual 
 print(missing)
+
+
+s = "{[()]}"
+
+stack = []
+
+for ch in s:
+
+    if ch == '(' or ch == '[' or ch == '{':
+        stack.append(ch)
+
+    else:
+        if len(stack) == 0:
+            print("Not Balanced")
+            break
+
+        top = stack[-1]
+
+        if (ch == ')' and top == '(') or \
+           (ch == ']' and top == '[') or \
+           (ch == '}' and top == '{'):
+
+            stack.pop()
+
+        else:
+            print("Not Balanced")
+            break
+
+else:
+    if len(stack) == 0:
+        print("Balanced")
+    else:
+        print("Not Balanced")
