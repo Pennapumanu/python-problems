@@ -494,3 +494,26 @@ for i in range(len(dup)):
 print(dup)
       
 
+arrival = [900, 940, 950, 1100, 1500, 1800]
+departure = [910, 1200, 1120, 1130, 1900, 2000]
+
+i = 0
+j = 0
+
+platforms = 0
+max_platforms = 0
+
+while i < len(arrival) and j < len(departure):
+
+    if arrival[i] <= departure[j]:
+        platforms += 1
+        i += 1
+
+        if platforms > max_platforms:
+            max_platforms = platforms
+
+    else:
+        platforms -= 1
+        j += 1
+
+print(max_platforms)
