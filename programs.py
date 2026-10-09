@@ -517,3 +517,6 @@ while i < len(arrival) and j < len(departure):
         j += 1
 
 print(max_platforms)
+
+
+        digit = digit + 1
