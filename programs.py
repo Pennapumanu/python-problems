@@ -520,3 +520,23 @@ print(max_platforms)
 
 
         digit = digit + 1
+
+
+numbers = [10, 20, 30, 40, 50]
+target = 90
+
+left = 0
+right = len(numbers) - 1
+
+while left < right:
+    total = numbers[left] + numbers[right]
+
+    if total == target:
+        print("Pair found:", numbers[left], numbers[right])
+        break
+
+    elif total > target:
+        right -= 1
+
+    else:
+        left += 1
