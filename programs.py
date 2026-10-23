@@ -540,3 +540,16 @@ while left < right:
 
     else:
         left += 1
+
+
+
+numbers = [45, 10, 30, 70, 20]
+target = 100
+
+for i in range(len(numbers)):
+  if numbers[i] == target :
+    print("target found")
+    break
+
+else:
+  print("target not found")
