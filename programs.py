@@ -553,3 +553,19 @@ for i in range(len(numbers)):
 
 else:
   print("target not found")
+
+
+
+numbers = [50, 20, 40, 10, 30]
+
+for i in range(len(numbers)):
+  min_index = i
+
+  for j in range(i+1,len(numbers)):
+    if numbers[j] < numbers[min_index]:
+      min_index = j 
+
+  numbers[i],numbers[min_index] = numbers[min_index],numbers[i]
+print(numbers)
+   
+
