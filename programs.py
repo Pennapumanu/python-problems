@@ -582,4 +582,25 @@ for i in range(1,len(numbers)):
   numbers[j+1] = key
   
 print(numbers)
-    
+
+
+
+n = [2, 1, 5, 1, 3, 2]
+k = 3
+
+total = 0
+
+# First window sum
+for i in range(k):
+    total += n[i]
+
+max_sum = total
+
+# Slide the window
+for i in range(len(n) - k):
+    total = total - n[i] + n[i + k]
+
+    if total < max_sum:
+        max_sum = total
+
+print("Maximum Sum:", max_sum)
