@@ -604,3 +604,20 @@ for i in range(len(n) - k):
         max_sum = total
 
 print("Maximum Sum:", max_sum)
+
+
+arr = [9, 4, 20, 3, 10, 5]
+k = 33
+
+count = 0
+
+for i in range(len(arr)):
+    total = 0
+
+    for j in range(i, len(arr)):
+        total += arr[j]
+
+        if total == k:
+            count += 1
+
+print(count)
