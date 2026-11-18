@@ -621,3 +621,24 @@ for i in range(len(arr)):
             count += 1
 
 print(count)
+
+s = "abcabcbb"
+
+max_length = 0
+
+for i in range(len(s)):
+    currvalue = ""
+
+    for j in range(i, len(s)):
+        if s[j] not in currvalue:
+            currvalue = currvalue + s[j]
+        else:
+            break
+
+        if len(currvalue) > max_length:
+            max_length = len(currvalue)
+
+print(max_length)
+
+
+
