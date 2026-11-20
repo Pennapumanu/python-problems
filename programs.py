@@ -641,4 +641,11 @@ for i in range(len(s)):
 print(max_length)
 
 
+arr = [0, 1, 0, 3, 12, 0, 5]
 
+for i in range(len(arr)-1, -1, -1):
+    if arr[i] < 1:
+        value = arr.pop(i)
+        arr.append(value)
+
+print(arr)
