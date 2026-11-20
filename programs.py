@@ -649,3 +649,17 @@ for i in range(len(arr)-1, -1, -1):
         arr.append(value)
 
 print(arr)
+
+
+
+num=[1,2,3,4,5,6,7]
+k=3
+l=len(num)
+c=0
+if l>0:
+    for k in range(0,k):
+        tem=num[-1]
+        for i in range(l-1,-1,-1):
+            num[i]=num[i-1]
+        num[0]=tem
+print(num)
